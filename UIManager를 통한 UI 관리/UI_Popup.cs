@@ -43,11 +43,11 @@ public class UI_Popup : UI_Base
         OpenUI();
     }
 
-    public void ClosePopup(Enums.PopupButtonType type)
+    public void ClosePopup(Enums.PopupButtonType type, bool isSound = true)
     {
         if (type == Enums.PopupButtonType.Confirm) _callbackConfirm?.Invoke();
         else _callbackCancel?.Invoke();
 
-        CloseUI();
+        CloseUI(isSound);
     }
 }
