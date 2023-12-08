@@ -9,7 +9,7 @@
 | :---: |
 | [🍡 주요 메서드 🍡](#dango-주요-메서드) |
 | [🍵 활용 🍵](#tea-활용) |
-| [🥕 트러블 슈팅 🥕](#트러블-슈팅) |
+| [🥕 트러블 슈팅 🥕](#carrot-트러블-슈팅) |
 
 <br>
 
@@ -17,7 +17,7 @@
 
 <br>
 
-## :rabbit:   개요  
+## :rabbit: 개요  
 - UIManager를 통해 UI Component들에 쉽게 접근하고 관리한다.
 - UIManager를 통해 Popup들을 편리하게 사용한다.
 
@@ -53,7 +53,7 @@
 
 <br>
 
-## :tea: 활용 🍵 
+## :tea: 활용 
 
 ### UIManager를 통해 UI Component에 접근하기
 
@@ -92,7 +92,7 @@ UIManager.Instance.ShowPopup<UI_SliderPopup>(
 
 <br>
 
-## 🥕 트러블 슈팅 🥕
+## :carrot: 트러블 슈팅
 
 ### ⚠️ 문제
 - 기존 방식은 모든 팝업의 매개변수를 UIManager의 ShowPopup 메서드에 전달하던 방식
