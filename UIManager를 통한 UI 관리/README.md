@@ -7,7 +7,7 @@
 
 | [🐰 개요 🐰](#rabbit_face-개요-rabbit_face) |
 | :---: |
-| [🍡 주요 메서드 🍡](#:dango:-주요-메서드-:dango:) |
+| [🍡 주요 메서드 🍡](#dango-주요-메서드-dango) |
 | [🍵 활용 🍵](#활용) |
 | [🥕 트러블 슈팅 🥕](#트러블-슈팅) |
 
@@ -17,7 +17,7 @@
 
 <br>
 
-## :rabbit_face: 개요 :rabbit_face:
+## 🐰 개요 🐰
 - UIManager를 통해 UI Component들에 쉽게 접근하고 관리한다.
 - UIManager를 통해 Popup들을 편리하게 사용한다.
 
