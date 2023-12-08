@@ -14,11 +14,11 @@ public class UI_Popup : UI_Base
 
     protected virtual void Awake()
     {
-        #region Check Null SerializeFields
-        Debug.Assert(_contentText != null, "Null Exception : _contentText");
-        Debug.Assert(_confirmButton != null, "Null Exception : _confirmButton");
-        Debug.Assert(_cancelButton != null, "Null Exception : _cancelButton");
-        #endregion
+#if UNITY_EDITOR
+        Debug.Assert(_contentText, "Null Exception : _contentText");
+        Debug.Assert(_confirmButton, "Null Exception : _confirmButton");
+        Debug.Assert(_cancelButton, "Null Exception : _cancelButton");
+#endif
 
         _confirmButton.onClick.AddListener(() => ClosePopup(Enums.PopupButtonType.Confirm));
         _cancelButton.onClick.AddListener(() => ClosePopup(Enums.PopupButtonType.Cancel));

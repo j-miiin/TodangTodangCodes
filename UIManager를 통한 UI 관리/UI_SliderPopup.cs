@@ -21,12 +21,13 @@ public class UI_SliderPopup : UI_Popup
     protected override void Awake()
     {
         base.Awake();
-        #region Check Null SerializeFields
-        Debug.Assert(_slider != null, "Null Exception : _slider");
-        Debug.Assert(_quantityText != null, "Null Exception : _quantityText");
-        Debug.Assert(_plusButton != null, "Null Exception : _plusButton");
-        Debug.Assert(_minusButton != null, "Null Exception : _minusButton");
-        #endregion
+
+#if UNITY_EDITOR
+        Debug.Assert(_slider, "Null Exception : _slider");
+        Debug.Assert(_quantityText, "Null Exception : _quantityText");
+        Debug.Assert(_plusButton, "Null Exception : _plusButton");
+        Debug.Assert(_minusButton, "Null Exception : _minusButton");
+#endif
 
         _slider.onValueChanged.AddListener(delegate { OnSliderValueChanged(); });
         _plusButton.onClick.AddListener(() => OnButtonClicked(true));
@@ -36,7 +37,9 @@ public class UI_SliderPopup : UI_Popup
     private void Start()
     {
         if (_soundManager == null) _soundManager = SoundManager.Instance;
+#if UNITY_EDITOR
         Debug.Assert(_soundManager != null, "Null Exception : SoundManager");
+#endif
     }
 
     public override void ShowPopup(PopupParameter popupParameter)

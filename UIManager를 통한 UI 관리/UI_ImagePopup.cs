@@ -14,11 +14,11 @@ public class UI_ImagePopup : UI_Popup
     {
         base.Awake();
 
-        #region Null Exception
-        Debug.Assert(_curIconImage != null, "Icon Image 누락");
-        Debug.Assert(_curIconImage != null, "Icon Image 누락");
-        Debug.Assert(_curIconImage != null, "Icon Image 누락");
-        #endregion
+#if UNITY_EDITOR
+        Debug.Assert(_curIconImage, "Null Exception : _curIconImage");
+        Debug.Assert(_prevButton, "Null Exception : _prevButton");
+        Debug.Assert(_nextButton, "Null Exception : _nextButton");
+#endif
 
         _prevButton.onClick.AddListener(ShowPrevImage);
         _nextButton.onClick.AddListener(ShowNextImage);
