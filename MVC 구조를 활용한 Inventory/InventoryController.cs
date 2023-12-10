@@ -24,12 +24,12 @@ public class InventoryController : MonoBehaviour
 
     public virtual void InitDatas()
     {
-        if (_gameManager == null) _gameManager = GameManager.Instance;
-        if (_uiManager == null) _uiManager = UIManager.Instance;
-        if (_dataManager == null) _dataManager = DataManager.Instance;
-        if (_resourceManager == null) _resourceManager = ResourceManager.Instance;
-        if (_soundManager == null) _soundManager = SoundManager.Instance;
-        if (_playerData == null) _playerData = _gameManager.GetPlayerData();
+        _gameManager = GameManager.Instance;
+        _uiManager = UIManager.Instance;
+        _dataManager = DataManager.Instance;
+        _resourceManager = ResourceManager.Instance;
+        _soundManager = SoundManager.Instance;
+        _playerData = _gameManager.GetPlayerData();
 
         #region Check Null Exception
 #if UNITY_EDITOR
