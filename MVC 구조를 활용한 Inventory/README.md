@@ -47,11 +47,10 @@
 
 |메서드|기능|
 |:---:|:---:|
-|[Init]()|Controller들의 Data를 초기화하며, 현재 Controller를 첫 번째 Tab의 Controller로 설정한다.|
-|[CallOnOpenInventory]()|인벤토리 UI가 Open 되었을 때, Init 메서드를 실행한다.|
-|[CallOnChangeTab]()|인벤토리의 탭이 변경되면 현재 Controller를 변경한 뒤 RefreshTab을 요청한다.|
-|[CallOnChangeSlot]()|인벤토리 ScrollView의 슬롯 상태가 변경되면 Controller에게 RefreshSlot을 요청한다.|
-|[CallOnRefreshDetail]()|인벤토리 상세 정보 창 상태가 변경되면 Controller에게 RefreshDetail을 요청한다.|
+|[Init](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryHandler.cs#L19-L25)|Controller들의 Data를 초기화하며, 현재 Controller를 첫 번째 Tab의 Controller로 설정한다.|
+|[CallOnOpenInventory](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryHandler.cs#L27-L30)|인벤토리 UI가 Open 되었을 때, Init 메서드를 실행한다.|
+|[CallOnChangeTab](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryHandler.cs#L32-L37)|인벤토리의 탭이 변경되면 현재 Controller를 변경한 뒤 RefreshTab을 요청한다.|
+|[CallOnRefreshDetail](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryHandler.cs#L39-L42)|인벤토리 상세 정보 창 상태가 변경되면 Controller에게 RefreshDetail을 요청한다.|
 
 <br>
 
@@ -60,10 +59,10 @@
 
 |메서드|기능|
 |:---:|:---:|
-|[InitDatas]()|Controller에서 공통으로 사용하는 Manager와 데이터 클래스를 캐싱한다.<br>각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하며, 추가적으로 필요한 Data들을 설정한다.|
-|[RefreshPlayerMoney]()|UI_Inventory에게 Player의 재화 정보 Update를 요청한다.|
-|[RefreshTab]()|각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하여,<br>현재 자신이 다루는 List로 UI_Inventory의 ScrollView를 Update한다.|
-|[RefreshDetail]()|각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하여,<br>현재 자신이 다루는 Data의 상세 정보 UI를 Update한다.|
+|[InitDatas](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryController.cs#L25-L44)|Controller에서 공통으로 사용하는 Manager와 데이터 클래스를 캐싱한다.<br>각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하며, 추가적으로 필요한 Data들을 설정한다.|
+|[RefreshPlayerMoney](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryController.cs#L46-L49)|UI_Inventory에게 Player의 재화 정보 Update를 요청한다.|
+|[RefreshTab](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryController.cs#L51-L54)|각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하여,<br>현재 자신이 다루는 List로 UI_Inventory의 ScrollView를 Update한다.|
+|[RefreshDetail](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/InventoryController.cs#L56-L59)|각 Tab에 대응하는 Controller들은 해당 메서드를 오버라이드하여,<br>현재 자신이 다루는 Data의 상세 정보 UI를 Update한다.|
 
 <br>
 
@@ -72,12 +71,12 @@
 
 |메서드|기능|
 |:---:|:---:|
-|[RefreshScrollView]()|ScrollView를 갱신한 뒤, 첫 번째 슬롯이 선택된 상태로 변경한다.|
-|[UpdatePlayerMoneyUI]()|Player의 재화 정보 UI를 업데이트한다.|
-|[InitTab]()|Tab 리스트 초기 설정을 담당한다.<br>각 Tab 버튼에 클릭 Listener를 연결한 뒤, 첫 번째 탭이 선택된 상태로 설정한다.|
-|[ChangeTab]()|Tab 버튼의 클릭 Listener로 연결되는 메서드이다.<br>ScrollView를 맨 위로 이동한 뒤, 선택된 탭을 변경한다.|
-|[InitSlots]()|받아온 데이터 개수만큼 오브젝트 풀링을 이용하여 ScrollView의 슬롯 오브젝트를 생성한다.|
-|[OnSelectedSlotChanged]()|ScrollView 슬롯 오브젝트의 클릭 Listener로 연결되는 메서드이다.<br>선택된 슬롯을 변경한 뒤, 슬롯에 대한 상세 정보 Update 이벤트를 실행한다.|
+|[RefreshScrollView](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L77-L96)|ScrollView를 갱신한 뒤, 첫 번째 슬롯이 선택된 상태로 변경한다.|
+|[UpdatePlayerMoneyUI](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L98-L114)|Player의 재화 정보 UI를 업데이트한다.|
+|[InitTab](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L116-L125)|Tab 리스트 초기 설정을 담당한다.<br>각 Tab 버튼에 클릭 Listener를 연결한 뒤, 첫 번째 탭이 선택된 상태로 설정한다.|
+|[ChangeTab](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L127-L136)|Tab 버튼의 클릭 Listener로 연결되는 메서드이다.<br>ScrollView를 맨 위로 이동한 뒤, 선택된 탭을 변경한다.|
+|[InitSlots](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L138-L169)|받아온 데이터 개수만큼 오브젝트 풀링을 이용하여 ScrollView의 슬롯 오브젝트를 생성한다.|
+|[OnSelectedSlotChanged](https://github.com/j-miiin/TodangTodangCodes/blob/9d523e24056454e40ffc5d78ad6103da6c516c28/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory/UI_Inventory.cs#L171-L178)|ScrollView 슬롯 오브젝트의 클릭 Listener로 연결되는 메서드이다.<br>선택된 슬롯을 변경한 뒤, 슬롯에 대한 상세 정보 Update 이벤트를 실행한다.|
 
 <br>
 
