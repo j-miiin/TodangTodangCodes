@@ -12,7 +12,6 @@ public class InventoryHandler : MonoBehaviour
     {
         _uiInventory.OnOpenInventory += CallOnOpenInventory;
         _uiInventory.OnTabChanged += CallOnChangeTab;
-        _uiInventory.OnSlotChanged += CallOnChangeSlot;
         _uiInventory.OnDetailViewChanged += CallOnRefreshDetail;
         Init();
     }
@@ -35,11 +34,6 @@ public class InventoryHandler : MonoBehaviour
         _curSelectedInventoryType = inventoryType;
         _curController = _inventoryControllers[(int)_curSelectedInventoryType];
         _curController.RefreshTab();
-    }
-
-    private void CallOnChangeSlot(UI_InventorySlot inventorySlot)
-    {
-        _curController.RefreshSlot(inventorySlot);
     }
 
     private void CallOnRefreshDetail(int idx)

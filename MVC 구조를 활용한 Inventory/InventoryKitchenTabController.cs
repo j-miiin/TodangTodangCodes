@@ -47,7 +47,7 @@ public class InventoryKitchenTabController : InventoryController
         }
     }
 
-    public override void RefreshSlot(UI_InventorySlot inventorySlot)
+    private void RefreshSlot(UI_InventorySlot inventorySlot)
     {
         KitchenUtensilInfoData data = _kitchenUtensilData[inventorySlot.ItemIdx];
         Sprite icon = data.DefaultData.IconSprite;

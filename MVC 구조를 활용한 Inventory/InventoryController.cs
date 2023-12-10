@@ -53,10 +53,6 @@ public class InventoryController : MonoBehaviour
         _curSelectedItemIdx = 0;
     }
 
-    public virtual void RefreshSlot(UI_InventorySlot inventorySlot)
-    {
-    }
-
     public virtual void RefreshDetail(int idx)
     {
         _curSelectedItemIdx = idx;

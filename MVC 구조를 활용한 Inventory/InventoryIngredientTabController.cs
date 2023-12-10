@@ -33,7 +33,7 @@ public class InventoryIngredientTabController : InventoryController
         }
     }
 
-    public override void RefreshSlot(UI_InventorySlot inventorySlot)
+    private void RefreshSlot(UI_InventorySlot inventorySlot)
     {
         IngredientInfoData data = _ingredientData[inventorySlot.ItemIdx];
         Sprite icon = data.DefaultData.IconSprite;
