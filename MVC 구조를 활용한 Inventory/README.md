@@ -108,7 +108,7 @@
 - View에서 전달 받은 입력으로 Data를 갱신하는 동작과 Data의 갱신으로 인한 View를 Update하는 동작을 모두 Controller에서 수행하도록 변경<br>
 -> View와 Data의 의존성을 줄이는 MVP 구조를 응용하여 문제를 해결
 
-<br><br>
+<br><br><br>
 
 ### ⚠️ 문제 2
 - Inventory에서 다루는 모든 Data에 대한 처리를 InventoryController 내부에서 수행
@@ -131,8 +131,24 @@ UI 클래스에서 Controller를 참조하여 필요한 Data를 가져오도록 
 -> 해당 Controller들은 기존의 InventoryController를 상속<br>
 - Controller들을 관리하는 InventoryHandler를 추가
 -> Tab이 변경되면 InventoryHandler는 현재 Tab에 대응하는 Controller로 바꾸어 동작 실행
+![GitHub Inventory](https://github.com/j-miiin/TodangTodangCodes/assets/62470991/44b4d882-98ed-4c9c-9aea-922d169abf39)
+```cs
+public class InventoryHandler : MonoBehaviour
+{
+  ...
 
+  private void CallOnChangeTab(Enums.InventoryType inventoryType)
+  {
+      _curSelectedInventoryType = inventoryType;
+      _curController = _inventoryControllers[(int)_curSelectedInventoryType];
+      _curController.RefreshTab();
+  }
 
+  ...
+}
+```
+
+<br>
 
 [🌙 목차로 돌아가기](#crescent_moon-목차)
 
