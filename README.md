@@ -9,6 +9,6 @@
 
 | [🐰 MVC 구조를 활용한 Inventory 🐰](https://github.com/j-miiin/TodangTodangCodes/tree/main/MVC%20%EA%B5%AC%EC%A1%B0%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20Inventory) |
 | :---: |
-| [🐇 Object Pooling 🐇](https://github.com/j-miiin/TodangTodangCodes/tree/main/Object%20Pooling) |
-| [🍡 UIManager를 통한 UI 관리 🍡](https://github.com/j-miiin/TodangTodangCodes/tree/main/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC) |
+| [🍡 Object Pooling 🍡](https://github.com/j-miiin/TodangTodangCodes/tree/main/Object%20Pooling) |
+| [🍵 UIManager를 통한 UI 관리 🍵](https://github.com/j-miiin/TodangTodangCodes/tree/main/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC) |
 
