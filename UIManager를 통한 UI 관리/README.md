@@ -38,6 +38,9 @@
 |[RemoveUIComponent](https://github.com/j-miiin/TodangTodangCodes/blob/bcb8da4e827f8da3155b97215df1687f5cb33bc6/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L69-L76)|UI Component를 저장한 Dictionary에서 요청받은 해당 UI Component를 삭제한다.<br>Scene이 변경되었을 때 오브젝트가 파괴되어 더 이상 참조할 수 없는 UI Component에 접근하는 것을 방지하기 위해 사용한다.|
 |[RemoveAllUIComponent](https://github.com/j-miiin/TodangTodangCodes/blob/bcb8da4e827f8da3155b97215df1687f5cb33bc6/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L78-L81)|UI Component를 저장한 Dictionary에 존재하는 모든 UI Component를 삭제한다.|
 |[ShowPopup](https://github.com/j-miiin/TodangTodangCodes/blob/bcb8da4e827f8da3155b97215df1687f5cb33bc6/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L83-L112)|요청 받은 UI Popup을 Show 한다.<br>GetUIComponent와 마찬가지로 요청 받은 Popup이 Dictionary에 존재하지 않는다면 Resources 폴더에서 Load하여 저장한 뒤 반환한다.|
+|[SetUIOnScreen](https://github.com/j-miiin/TodangTodangCodes/blob/a68581871a2d51263ae616105fbd18294d054b87/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L114-L134)|UI가 열리면 Stack에 해당 UI를 Push한다.<br>UI가 닫힐 때는 Stack에서 Pop한다.|
+|[GetCurrentUI](https://github.com/j-miiin/TodangTodangCodes/blob/a68581871a2d51263ae616105fbd18294d054b87/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L136-L140)|현재 열려있는 UI를 저장하는 Stack에서 가장 위에 있는 UI를 반환한다.|
+|[CloseAllPopUps](https://github.com/j-miiin/TodangTodangCodes/blob/a68581871a2d51263ae616105fbd18294d054b87/UIManager%EB%A5%BC%20%ED%86%B5%ED%95%9C%20UI%20%EA%B4%80%EB%A6%AC/UIManager.cs#L153-L160)|현재 열려있는 Popup을 모두 닫는다.<br>Scene 이동 시 열린 팝업들을 닫기 위해 사용한다.|
 
 <br>
 
